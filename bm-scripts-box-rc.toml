@@ -1,0 +1,33 @@
+[bmscriptsbox]
+
+[bmscriptsbox.info]
+id = "b480d4b7-2c05-4b88-ba78-fc8f2e5b7f89"
+name = "图片加边框"
+desc = "图片批量加边框 | 实线/双线/阴影/拍立得/胶片五种边框、宽度/颜色/圆角可调、实时预览、多图批量、输出目录与文件名后缀可配置 | 支持右键/快捷键/卡片触发，一键批量输出到指定目录或源图片目录"
+version = "1.3.0"
+icon = "./imgs/logo.png"
+
+[bmscriptsbox.runtime]
+language = "node.js"
+language_version = ">=v16.0"
+entry = "main.js"
+terminal = "never"
+binaries = [{name = "webview-cli"}]
+
+[bmscriptsbox.triggers.context_menu]
+enabled = true
+targets = ["files"]
+filters = [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"]
+
+[bmscriptsbox.triggers.shortcut]
+enabled = true
+input_type = "files"
+filters = [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"]
+
+
+[[bmscriptsbox.inputs]]
+name = "target_paths"
+label = "图片"
+type = "list"
+exts = [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"]
+description = "要添加边框的图片文件"

@@ -1,0 +1,16 @@
+{
+  "name": "image-border",
+  "version": "1.3.0",
+  "private": true,
+  "description": "图片批量加边框 - 为图片添加实线、双线、阴影、拍立得、胶片五种边框效果",
+  "main": "main.js",
+  "engines": {
+    "node": ">=16.0"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.2"
+  }
+}
